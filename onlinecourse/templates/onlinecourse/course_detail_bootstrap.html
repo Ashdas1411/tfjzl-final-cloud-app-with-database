@@ -60,7 +60,7 @@
             </button>
 
             <div id="exam" class="collapse mt-2">
-                <form id="questionform" method="POST">
+                <form id="questionform" method="POST" action="{% url 'onlinecourse:submit' course.id %}">
                     {% csrf_token %}
 
                     {% for question in course.question_set.all %}
